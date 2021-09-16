@@ -5,6 +5,7 @@ function MyApp({ Component, pageProps }) {
     <SWRConfig
       value={{
         revalidateOnFocus: false,
+        revalidateIfStale: false,
       }}
     >
       <Component {...pageProps} />

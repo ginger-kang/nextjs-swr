@@ -3,11 +3,11 @@ import Pokemon from "../components/Pokemon";
 import { getPoke } from "./api";
 
 export async function getServerSideProps(ctx) {
-  const data = await getPoke(20);
+  const data = await getPoke(0);
   return {
     props: {
       fallback: {
-        "/api/poke": data,
+        "/pokemon?offset=0": data,
       },
     },
   };
